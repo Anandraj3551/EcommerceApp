@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active hr {
+  display: block;
+}
+
+* {
+  font-family: Outfit;
+}
+
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Custom Navigation Button Styles */
+.custom-prev-button,
+.custom-next-button {
+  color: #374151;
+  opacity: 1;
+}
+
+.custom-prev-button:disabled,
+.custom-next-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #e5e7eb !important;
+}
+
+/* Hide navigation on mobile */
+@media (max-width: 640px) {
+  .custom-prev-button,
+  .custom-next-button {
+    display: none;
+  }
+}
+
+/* Optional: Add smooth transitions */
+.swiper-slide {
+  transition: transform 0.3s ease;
+}
